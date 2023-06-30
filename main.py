@@ -133,21 +133,21 @@ def validate_input(file_or_transcript, api_key, use_gpt_4):
 
     return True
 
-    footer="""<style>
-    .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    color: black;
-    text-align: center;
-    }
-    </style>
-    <div class="footer">
-    <p>Developed by Samurai Sakamoto</p>
-    </div>
-    """
+footer="""<style>
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Developed by Samurai Sakamoto</p>
+</div>
+"""
 
 if __name__ == '__main__':
 
