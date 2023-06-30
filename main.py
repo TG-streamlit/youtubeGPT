@@ -30,7 +30,7 @@ def main():
     api_key = st.text_input("Enter API key here.", "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")
 
     with st.expander("Options"):
-        use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=True)
+        use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=False)
         find_clusters = st.checkbox('Find optimal clusters (experimental, could save on token usage)', value=False)
 
     if st.button('Summarize (click once and wait)'):
@@ -135,5 +135,23 @@ def validate_input(file_or_transcript, api_key, use_gpt_4):
 
 
 if __name__ == '__main__':
+    
+    footer="""<style>
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    }
+    </style>
+    <div class="footer">
+    <p>Developed by Samurai Sakamoto</p>
+    </div>
+    """
+    st.markdown(footer,unsafe_allow_html=True)
+
     main()
 
