@@ -27,7 +27,7 @@ def main():
     if input_method == 'Enter a YouTube URL':
         youtube_url = st.text_input("Enter a YouTube URL to summarize")
 
-    api_key = st.text_input("Enter API key here.", "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")
+    api_key = st.text_input("Enter API key here.", "")
 
     with st.expander("Options"):
         use_gpt_4 = st.checkbox("Use GPT-4 for the final prompt (STRONGLY recommended, requires GPT-4 API access - progress bar will appear to get stuck as GPT-4 is slow)", value=False)
@@ -133,9 +133,6 @@ def validate_input(file_or_transcript, api_key, use_gpt_4):
 
     return True
 
-
-if __name__ == '__main__':
-    
     footer="""<style>
     .footer {
     position: fixed;
@@ -151,6 +148,9 @@ if __name__ == '__main__':
     <p>Developed by Samurai Sakamoto</p>
     </div>
     """
+
+if __name__ == '__main__':
+
     st.markdown(footer,unsafe_allow_html=True)
 
     main()
